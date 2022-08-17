@@ -131,7 +131,7 @@ resource "aws_nat_gateway" "natgateway_1" {
 # Create NAT gateway2
 resource "aws_nat_gateway" "natgateway_2" {
   count         = "1"
-  allocation_id = aws_eip.eip_natgw1[count.index].id
+  allocation_id = aws_eip.eip_natgw2[count.index].id
   subnet_id     = aws_subnet.public_subnet2.id
 }
 
